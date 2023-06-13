@@ -1,5 +1,28 @@
 'use strict';
 
+let startCalculating = document.getElementById('start'),
+    budgetResult = document.getElementsByClassName('budget-value')[0],
+    dayBudgetResult = document.getElementsByClassName('daybudget-value')[0],
+    incomeLevelResult = document.getElementsByClassName('level-value')[0],
+    mainExpensesResult = document.getElementsByClassName('expenses-value')[0],
+    optExpensesResult = document.getElementsByClassName('optionalexpenses-value')[0],
+    additionalIncomeResult = document.getElementsByClassName('income-value')[0],
+    monthSavingsResult = document.getElementsByClassName('monthsavings-value')[0],
+    yearSavingsResult = document.getElementsByClassName('yearsavings-value')[0],
+
+    mainExpenses = document.getElementsByClassName('expenses-item'),
+    approveMainExpenses = document.getElementsByTagName('button')[0],
+    approveOptExpenses = document.getElementsByTagName('button')[1],
+    calculateDayBudget = document.getElementsByTagName('button')[2],
+    optExpenses = document.querySelectorAll('.optionalexpenses-item'),
+    potentialIncome = document.querySelector('.choose-income'),
+    checkSavings = document.querySelector('#savings'),
+    chooseSum = document.querySelector('.choose-sum'),
+    choosePercent = document.querySelector('.choose-percent'),
+    yearValue = document.querySelector('.year-value'),
+    monthValue = document.querySelector('.month-value'),
+    dayValue = document.querySelector('.day-value');
+
 let money, time;
 
 //СПРАШИВАЕМ БЮДЖЕТ НА МЕСЯЦ И ДАТУ
